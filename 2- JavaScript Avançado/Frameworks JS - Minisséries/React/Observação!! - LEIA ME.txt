@@ -1,9 +1,0 @@
-
-Para conseguir visualizar um arquivo em PHP no navegador vc precisa estar conectado(a) a um servidor!! 
-seja ele online ou local, como o Xampp.
-
-Aqui um vídeo para vc possa entender mais sobre e conseguir abrir um servidor local no Xampp: https://youtu.be/gKxOjVqVaI8
-
-Ou se preferir vc pode comprar uma hospedagem em um servidor online!
-
-Nesta Minissérie nós tb usamos arquivos em Babel que é o tipo de arquivo que permite que a linguagem React seja traduzida para os nossos navegadores! Para rodar, fazer com que seu editor de texto entenda esse tipo de arquivo, Babel, vc vai precisar provavelmente baixar um Plugin que traduz essa sintaxe para o IDE!
