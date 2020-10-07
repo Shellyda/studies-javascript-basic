@@ -11,5 +11,5 @@
  	<li>Entender como usar e fazer Plugins JS</li>
  	<li>Eventos dinâmicos</li>
  	<li>Laços de repetição</li>
- 	<li>Projetos: <a href="">Criar uma Janela Modal + validar um formulário</a> e <a href="">Desenvolver um sistema de Alarme</a></li>
+ 	<li>Projetos: <a href="">Criar uma Janela Modal + Validar um formulário</a> e <a href="">Desenvolver um sistema de Alarme</a></li>
  </ul>
