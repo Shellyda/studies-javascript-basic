@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplicação usando Angular JS</title>
+	<meta charset="utf-8">
+  
+</head>
+<body>
+	<!-- Essa aplicação se encontra aqui: https://www.w3schools.com/angular/angular_application.asp
+         Todo o passo a passo é explicando nessa página! 
+	 -->
+
+<!--  
+No HTML, adicione um campo de texto e vincule-o ao aplicativo com a diretiva ng-model.
+
+No controlador, crie uma função chamada addItem e use o valor do campo de entrada addMe para adicionar um item à matriz de produtos.
+
+Adicione um botão e dê a ele uma diretiva ng-click que executará a função addItem quando o botão for clicado.
+-->
+
+<div ng-app="myShoppingList" ng-controller="controlador">
+  <ul>
+    <li ng-repeat="x in products">
+      {{x}}<span ng-click="removeItem($index)">&times;</span><!-- Chamando a função responsável por remover itens que irá usar como parâmetros o index atual do determinado item removido. -->
+    </li>
+  </ul>
+  <input ng-model="addMe"><!-- Objeto que guarda o que foi escrito pelo usuário sob a caixa de msg -->
+  <button ng-click="addItem()">Adicionar</button><!-- A cada clique a função para adicionar será chamada. -->
+  <p>{{errortext}}</p><!--A Msg de erro é importada para cá -->
+</div><!-- myShoppingList -->
+
+<!--
+Também queremos ser capazes de remover itens da lista de compras.
+
+No controlador, crie uma função chamada removeItem, que pega o índice do item que você deseja remover, como parâmetro.
+
+No HTML, faça um elemento <span> para cada item e dê a eles uma diretiva ng-click que chama a função removeItem com o $index atual.
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

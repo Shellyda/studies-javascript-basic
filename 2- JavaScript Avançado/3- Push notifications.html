@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Push notifications</title>
+	<!-- https://cdnjs.com/libraries/jquery 
+	 Sistema abaixo foi feito através dessa biblioteca!
+	  -->
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+<script>
+if (Push.Permission.get() != 'granted') {
+   Push.Permission.request(); //Pedidindo permissão ao usuário para mandar notificações 
+}
+if (Push.Permission.get() == 'granted') {
+	Push.create('Olá do site aqui',
+	{
+	body: 'Esta é uma notificação!',
+	icon: 'icon.png',
+	timeout: 10000,
+	vibrate: [100, 100, 100],//Vibração da notificação em dispositivos mobile
+	onclick: function(){
+      window.location.href="https://cdnjs.com/libraries/jquery";
+	}
+	});
+}
+</script>
+</body>
+</html>

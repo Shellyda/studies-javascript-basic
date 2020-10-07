@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+html,body{
+	height: 100%;
+}
+
+
+.form{
+	margin: 100px auto;
+	width: 50%;
+	color: white;
+	padding-left: 100px;
+}
+
+.form h2{
+	font-size: 23px;
+	font-family: "Open Sans";
+}
+
+.form p{
+	font-size: 15px;
+	font-family: "Open Sans";
+	max-width: 400px;
+	padding-right: 10px;
+}
+
+.form form{
+	margin-top:15px;
+}
+
+.form form input[type=text], 
+.form form input[type=email]{
+	outline: 0;
+	width: 90%;
+	max-width: 480px;
+	margin-top:8px;
+	height: 58px;
+	padding-left: 8px;
+	line-height: 58px;
+	border:1px solid rgb(200,200,200);
+}
+
+.form form textarea{
+	outline: 0;
+	resize: none;
+	width: 90%;
+	margin-top:8px;
+	max-width: 480px;
+	padding:15px;
+	border:1px solid rgb(200,200,200);
+	height: 160px;
+}
+
+.form form input[type=submit]{
+	outline: 0;
+	border: 0;
+	background-color: #FF703D;
+	width: 165px;
+	height: 44px;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+	margin-top:15px;
+	border-radius: 30px;
+}
+
+.form form input[type=submit]:hover{
+	background-color: #ff5a1f;
+}

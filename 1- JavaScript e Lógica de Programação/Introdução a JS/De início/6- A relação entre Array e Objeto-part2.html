@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+<body>
+
+<!-- 
+
+Arrays e Objetos possuem o msm comportamento, funcionam como vetores e alocando memória, representando inúmeras variáveis. 
+
+Podem ser relacionados, de modo que um objeto pode ser transformado em um array e um array pode ser transformado em um objeto tb.
+
+-->
+
+<!-- Transformando um Array em um Objeto -->
+<script>
+	
+window.onload = function(){
+
+/* Definindo uma variável como Array */
+		var array = [];
+
+ /* transformando Arrays em Objetos, definindo eles como objetos. */
+		array[2] = {};
+        array[3] = {};
+
+ /* Atribuindo valor ao array transformado em um objeto */
+		array[2].nome = 'qualquer';
+		array[3].nome = 'valor';
+
+/*Mostra a msg diretamente no console do navegador na msm linha */
+  console.log(array[2].nome, array[3].nome);
+
+
+/* em linhas diferente */
+ console.log(array[2].nome);
+ console.log(array[3].nome);
+
+
+// O js é uma linguagem de progrmação mto flexível, permitindo que um array seja transformado em um objeto tb dessa forma: 
+
+var variavel = [];
+
+variavel.obj = {};
+
+variavel.obj.nome = 'shell';
+
+console.log(variavel.obj.nome);
+
+
+
+
+
+}
+
+</script>
+</body>
+</html>

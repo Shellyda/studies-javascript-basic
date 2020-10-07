@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+
+<style>
+
+	button{
+		background-color: #3495eb;
+		line-height: 10px;
+		height: 40px;
+		border: 1px solid #09131c;
+		color: white;
+	}
+
+</style>
+</head>
+<body>
+
+<div style=" margin: 100px auto; text-align: center;">
+<!-- 
+Esse examplo abaixo usa o metodo para achar um elemento do HTML( com id="demo") e mudar o conteúdo desse elemento (innerHTML) para "Olá JavaScript":
+-->
+
+<h2>O que o JavaScript pode fazer?</h2>
+
+<p id="demo">JavaScript pode mudar o conteúdo do HTML.</p>
+
+<!-- provocando um evento ao clicarmos o botão -->
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Olá JavaScript!'">Clica!</button>
+
+</div>
+
+
+</body>
+</html>

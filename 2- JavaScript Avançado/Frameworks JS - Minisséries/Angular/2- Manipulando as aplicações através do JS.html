@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Angular (2)</title>
+	<style>
+		.pai{
+			margin: 0 auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!--Uma aplicação de efeito imediato -->
+
+<!-- Vamos manipular essa aplicação diretamente via JS -->
+<div ng-app="NomeDaMinhaAplicacao"  ng-controller="NomeDoControlador" class="pai">
+<p>Nome: <input ng-model="nome"></p>
+<p>Outro nome: <input ng-model="outro_nome"></p>
+
+<!-- Resgatando os valores escritos pelo usuário: -->
+<p>O nome digitado foi: {{nome}}</p>
+<p>O outro nome digitado foi: {{outro_nome}}</p>
+</div>
+
+<!-- Manipulando... -->
+<script>
+	var app = angular.module('NomeDaMinhaAplicacao', []);
+	app.controller('NomeDoControlador', function($scope){
+		$scope.nome = "Shell";
+		$scope.outro_nome = "Jorge";
+	});
+</script>
+	
+</script>
+</body>
+</html>

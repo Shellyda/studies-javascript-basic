@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+
+<style>
+	p{
+		font-size: 18px;
+	}
+
+		button{
+		background-color: #3495eb;
+		line-height: 10px;
+		height: 40px;
+		border: 1px solid #09131c;
+		color: white;
+	}
+</style>
+
+<!-- 
+O JavaScript pode "exibir" dados de diferentes maneiras:
+
+Escrevendo em um elemento HTML, usando innerHTML.
+Escrevendo em um elemento HTML usando document.write().
+Escrevendo em uma caixa de alerta, usando window.alert ().
+Escrevendo no console do navegador, usando console.log ().
+
+-->
+<body>
+
+<!-- innerHTML -->
+<h2 style="color: red;">Escrevendo em um elemento HTML, usando innerHTML.
+</h2>
+<p>Perceba que o paragráfo abaixo imprimirá na tela o q foi determinado no innerHTML, propridade essa que precisa de um "caminho"(dado pelo 'getElementById' que fica encarregado de abrir essa "passagem") para escrever em um elemento HTML.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+
+
+<!-- document.write -->
+<h2 style="color: blue;">Escrevendo em um elemento HTML usando document.write().
+</h2>
+
+<p>O document.write escreve diretamente no documento HTML, ao contrário do innerHTML que precisa de um diretório.</p>
+
+<script>
+document.write(10 + 6);
+</script>
+
+<p>Nunca chame document.write depois que o documento terminar de carregar.
+Ele substituirá o documento inteiro.</p>
+
+<button type="button" onclick="document.write(10 + 6)">Clique aqui e veja isso acontecendo!</button> 
+
+<p>Ao clicar no botão acima vc irá deletar todo HTML existente na página.</p>
+
+
+<!-- Escrevendo em uma caixa de alerta, usando window.alert (). -->
+
+<script>
+window.alert(5 + 6);
+</script>
+
+<!-- Não é obrigátorio usar a palavra-chave 'window'.
+
+No JavaScript, o objeto 'window' é o objeto de escopo global, o que significa que variáveis, propriedades e métodos por padrão pertencem ao objeto 'window'. Isso também significa que especificar a palavra-chave window é opcional:
+
+-->
+<script>
+alert(22 + 6);
+</script>
+
+
+
+<!-- Escrevendo no console do navegador, usando console.log (). -->
+<script>
+console.log(5 + 6);
+</script>
+
+
+<!-- Informação relevante -->
+<h2>O JavaScript não possui nenhum objeto ou método de impressão. </h2>
+
+<p>
+Você não pode acessar dispositivos de saída do JavaScript. 
+
+A única exceção é que você pode chamar o método window.print () no navegador para imprimir o conteúdo da janela atual.</p>
+
+
+<button onclick="window.print()">Imprima essa página, clicando aqui!</button>
+
+<p>OBS: Dispositivo de saída(Output devices) são dispositivos que exibem dados e informações processadas pelo computador, também chamados de unidades de saída. Por outras palavras, permitem a comunicação no sentido do computador para o utilizador. Exemplos: projetor de vídeo, impressora e monitor.</p>
+
+
+
+
+
+
+
+</body>
+</html>

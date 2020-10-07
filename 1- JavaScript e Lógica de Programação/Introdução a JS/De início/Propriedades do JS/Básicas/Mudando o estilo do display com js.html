@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+
+<style>
+
+	button{
+		background-color: #3495eb;
+		line-height: 10px;
+		height: 40px;
+		border: 1px solid #09131c;
+		color: white;
+	}
+</style>
+</head>
+<body>
+
+<div style="width: 1000px;  margin: 100px auto; text-align: center;">
+
+<h2>O que o JavaScript pode fazer?</h2>
+
+<p id="demo">JavaScript pode mudar o estilo do display dos elementos no HTML.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Clica aqui para esconder o elemento!</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Clica aqui para fazer o elemento aparecer!</button>
+
+
+
+<!-- display block X inline-block -->
+
+<div id="exemplo" style=" margin: 20px auto; width: 200px; background-color: red; height: 80px; color: white; padding: 10px;">BOX</div>
+
+<button type="button" onclick="document.getElementById('exemplo').style.display='block'">Clica aqui para fazer a box ficar abaixo dos botões dnv!</button>
+
+<button type="button" onclick="document.getElementById('exemplo').style.display='inline-block'">Clica aqui para fazer a box ficar na msm linha dos elementos de cima!</button>
+
+</div>
+</body>
+</html>

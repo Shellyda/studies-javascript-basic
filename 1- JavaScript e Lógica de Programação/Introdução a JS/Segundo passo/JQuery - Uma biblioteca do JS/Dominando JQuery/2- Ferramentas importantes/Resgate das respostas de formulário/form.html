@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resgatando Respostas</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="form">
+	<form method="post" action="form.php"><!-- para que as repostas sejam enviadas -->
+				<input required type="hidden" name="nome do formulário" value="Formulário 1"> <!-- caso tenha mais de um formulário no site e dentro do servidor precisamos diferenciar eles. Esse input só aparece dentro do servido no webmail com o nome e valor definido por nós. -->
+				<input type="text" name="nome" placeholder="Nome*">
+				<input type="email" name="email" placeholder="E-mail*">
+				<input type="text" name="telefone" placeholder="Telefone*">
+				<textarea name="mensagem" placeholder="Mensagem*"></textarea>
+				<div class="clear"></div>
+				<div><input type="submit" value="Enviar"></div>
+			</form>
+<!-- OBS: Podemos incluir quantos inputs quisermos q todas as respostas seram validadas e enviadas para o servidor externo -->
+</div><!--form-->
+
+
+<!-- incluindo os arquivos js -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.ajaxform.js"></script><!-- plugin ajax - receber respostas de outros sites, platafromas!-->
+<script src="js/form.js"></script>
+<script src="js/jquery.mask.js"></script><!-- plugin mask, para validar as respostas -->
+
+<!-- Enviando as respostas do formulário para o servidor externo -->
+<script>
+	$(function(){
+       //Função do plugin ajax: submit/ajaxSubmit
+		$('form').submit(function(){
+           //Chamando a função 'formularioPreenchido', criado abaixo, para validar as respostas dadas no formulário.
+			if(formularioPreenchido()){
+					var form = $('form');//variável intuitiva
+					$('form').ajaxSubmit({
+						beforeSubmit:function(){
+							form.find('input[type=submit]').attr('disabled','true');//Fazer com que o usuário não possa clicar novamente no botão de enviar ,imediatamente, dps de já ter clicado.
+							form.find('input[type=submit]').animate({'opacity':'0.4'})//Aplicando uma animação para o envio do formulário.
+							form.find('input[type=submit]').attr('value','Carregando...');//Mudando o valor desse input para o tempo de espera até o envio do form.
+						},
+						success:function(data){
+							//Aqui você pode inserir uma div, por exemplo, personalizar da forma que quiser dizer pro usuário que o formulário dele foi enviado.
+							//Qualquer mensagem de sucesso, após o formulário ter sido enviado.
+							alert('Formulário foi enviado com sucesso!');
+
+							//Colocando as definições padrões novamente
+							form.find('input[type=submit]').removeAttr('disabled');
+							form.find('input[type=submit]').animate({'opacity':'1'})
+							form.find('input[type=submit]').attr('value','Enviar');
+							form[0].reset();//resetando o formulário para dar 'refresh' no form.
+						}
+					});
+			}else{
+				//Aqui podemos personalizar da forma que quisermos!
+				alert("Campos Vázios não são permitidos!");
+			}
+
+
+
+			return false;
+		});
+
+		function formularioPreenchido(){
+			//Pegando os valores digitados pelo usuário nos inputs:
+			var nome = $('[name=nome]').val();
+			var email = $('[name=email]').val();
+			var telefone = $('[name=telefone]').val();
+			var mensagem = $('[name=mensagem]').val();
+			//"Se algum dos campos estiver vazio retorne false."
+			if(nome === '' || email === '' || telefone === '' || mensagem === ''){
+				return false;
+			}else{
+				return true;
+			}
+		}
+
+
+	});//função de carregamento js
+</script>
+</body>
+</html>

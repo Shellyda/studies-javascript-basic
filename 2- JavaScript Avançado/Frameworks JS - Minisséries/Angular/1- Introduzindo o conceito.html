@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Angular (1)</title>
+</head>
+<body>
+<!-- https://www.w3schools.com/angular/angular_intro.asp
+AngularJS estende HTML
+AngularJS estende HTML com diretivas ng.
+
+A diretiva ng-app define um aplicativo AngularJS.
+
+A diretiva ng-model vincula o valor dos controles HTML (entrada, seleção, área de texto) aos dados do aplicativo.
+
+A diretiva ng-bind liga os dados do aplicativo à visualização HTML.
+-->
+
+<!-- Manipulando todas aplicações diretamente no código sem recorrer ao JS, ainda. Tudo feito através do atributo 'ng-init' -->
+<div ng-app="" ng-init="firstName='John';lastName='Doe'; cor='lightblue'; points=[1,15,19,2,40]" style="margin: 0 auto; text-align: center;">
+	<h2 style="font-weight: bold; color: purple;">Introduzindo o conceito do Framework de Javascript Angular</h2>
+  <p>Minha primeira expressão: {{ (5 + 5 * 2 )/ 10 }}</p>
+  <p>Exemplo com objetos no Angular: O nome é {{ firstName + " " + lastName }}</p>
+
+  <h2>Coloque nesse input o nome da cor que vc gostaria que fosse ele:</h2>
+                                       <!-- ng-model - torna a troca de cor dinâmica possível!! -->
+  <input style="background-color:{{cor}}" ng-model="cor" style="width: 200px; height: 250px;">
+   
+  <h2>Exemplo usando a semântica normal do Angular:</h2>
+    <p>1- Terceiro resultado é {{ points[2] }}</p>
+ 
+  <h2>Exemplo usando ng-bind:</h2>
+  <p>O terceiro resultado é <span ng-bind="points[2]"></span></p>
+
+  <p style="color: red; font-weight: bold;">OBS: O resultado é o msm mas a semântica é diferente!</p>
+</div>
+
+<!-- Lembrando que incluir arquivos de maneira local é bem melhor pq garante maior rápidez no carregamento desses no site. Mas pra função de teste estaremos incluindo de maneira externa! -->
+
+<!-- OBS: no código não podemos ter 2 elementos com o atributo 'ng-app' que seria o msm q inicializa as aplicações do Framework Angular. Tudo que for de aplicação tem q ser envelopado em um só elemento! -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+</html>

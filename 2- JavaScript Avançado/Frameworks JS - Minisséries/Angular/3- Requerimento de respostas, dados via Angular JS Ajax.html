@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Angular (3)</title>
+</head>
+<body>
+<!-- Ajax é um protocolo que garante a troca de informações entre servidores, sites...diferentes! Por esse motivo vc deve estar conectado a um servidor seja online ou local. https://www.w3schools.com/angular/angular_http.asp-->
+<div ng-modal="myApp" ng-controller="myCtrl">
+<div ng-blind-html="resposta"></div>
+{{resposta}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+	var obj = {
+		   method: 'GET',
+		   url: 'ajax.html',
+	};
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope, $http, $sce){
+		$http(obj).then(function mySuccess(response){
+			$scope.resposta = $sce.trustAsHtml(response.data);
+		}, function myError(response){
+			$scope.resposta = response.statusText;
+		});
+	});
+</script>
+</body>
+</html>

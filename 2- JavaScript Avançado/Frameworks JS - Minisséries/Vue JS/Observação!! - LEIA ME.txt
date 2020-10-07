@@ -1,0 +1,7 @@
+
+Para conseguir visualizar um arquivo em PHP no navegador vc precisa estar conectado(a) a um servidor!! 
+seja ele online ou local, como o Xampp.
+
+Aqui um vídeo para vc possa entender mais sobre e conseguir abrir um servidor local no Xampp: https://youtu.be/gKxOjVqVaI8
+
+Ou se preferir vc pode comprar uma hospedagem em um servidor online!

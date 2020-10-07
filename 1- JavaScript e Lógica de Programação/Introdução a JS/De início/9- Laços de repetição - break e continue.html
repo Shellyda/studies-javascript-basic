@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+<body>
+
+<!-- Propriedades break e continue nos laços de repetição -->
+<script>
+window.onload = function(){
+
+//Exemplo usando FOR - CONTINUE
+
+for(var i = 0; i < 10; i++){
+
+//"Quando o loop chegar no 2, não imprima ele na tela e continue o loop, excluindo o 2."
+if(i == 2){
+	continue; //funciona assim: quando o programa ler a propriedade continue vai voltar para verificar as condições impostas pelo FOR e vai continuar o loop sem o número específicado no 'if'.
+}
+
+
+//imprimindo o loop
+console.log(i);
+
+}
+
+
+//Exemplo usando WHILE - BREAK
+
+var num;
+
+num = 0;
+
+while(num <= 10){
+
+//"Quando o loop chegar no 5 interrompa o loop."
+if(num == 5){
+	break; //funciona assim: quando o programa ler a propriedade break ele não volta para verificar as condições e quebra o loop no número específicado no 'if'.
+}
+	console.log(num);
+	num+=1; // num++; / num = num + 1;
+}
+
+
+
+
+
+
+
+
+}
+
+</script>
+
+</body>
+</html>

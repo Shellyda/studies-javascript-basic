@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dominando JQuery</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style>
+
+.background{
+	display: none;/* não irá aparecer até a ação determinada via JS aconteça! */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.6);
+}	
+
+.button{
+	width: 80%;
+	max-width: 300px;
+	height: 100px;
+
+	/*Estilizando o texto*/
+	color: white;
+	font-size: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: bold;
+	font-family: helvetica;
+	line-height: 100px;
+	text-align: center;
+
+	background-color: #69a4d3;
+	border-radius: 10px;
+
+	/*centralizando*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+}
+
+.form{
+	/*centralizando*/
+	position: absolute;/* não mudaria caso fosse 'position: relative;' pq o elemento referência seria o msm, o body*/
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+
+	border:4px solid rgb(210,210,210);
+	background-color: white;
+	max-width: 400px;
+	padding:80px 2%;
+	width: calc(94% - 32px);
+}
+
+.form input[type=text]{
+	width: 100%;
+	height: 48px;
+
+	line-height: 48px;
+	padding-left: 8px;
+    color: #ccc;
+    
+	border:1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+.form input[type=submit]{
+	width: 100%;
+	height: 48px;
+
+	color: white;
+	font-size: 17px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: bold;
+	font-family: helvetica;
+	line-height: 48px;
+	text-align: center;
+
+	background-color: #69a4d3;
+	border-radius: 10px;
+	border:0;/*tirando a definição padrão */
+}
+
+.closeBtn{
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	border:1px solid #ccc;
+	background-color:white;
+    
+    font-size: 24px;
+    text-align: center;
+	line-height: 28px;
+	color:#69a4d3;
+    
+    /*centralizando na extrema direita no topo da sua div pai(form)*/
+	position: absolute;
+	right: -16px;
+	top: -16px;
+
+	cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="background">
+	<div class="form">
+		<div class="closeBtn">x</div><!--closeBtn -->
+		<form id="form1">
+			<input type="text" name="nome" placeholder="*Nome completo">
+			<input type="text" name="email" placeholder="*E-mail">
+			<input type="text" name="telefone" placeholder="*Telefone">
+			<input type="submit" name="acao" value="Cadastrar">
+		</form>
+	</div><!-- form -->	
+</div><!--background -->
+
+
+
+<div class="button">
+  ENTRE EM CONTATO
+</div><!-- button -->
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/janelamodal.js"></script>
+</body>
+</html>

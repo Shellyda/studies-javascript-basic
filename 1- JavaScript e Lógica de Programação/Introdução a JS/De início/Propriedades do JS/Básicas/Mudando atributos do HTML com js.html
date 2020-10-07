@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+
+<style>
+
+	button{
+		background-color: #3495eb;
+		line-height: 10px;
+		height: 40px;
+		border: 1px solid #09131c;
+		color: white;
+	}
+
+	img{
+            width: 250px; height: 309.95px;
+	}
+
+</style>
+</head>
+<body>
+
+<div style=" margin: 0 auto; text-align: center;">
+
+<h2>O que o JavaScript pode fazer?</h2>
+
+<p>JavaScript pode mudar atributos do HTML.</p>
+
+<p>Nesse caso o JavaScript muda o valor do atributo src (origem) de uma imagem.</p>
+
+
+<button onclick="document.getElementById('myImage').src='rindo.gif'">Eu com tu</button>
+
+<img id="myImage" src="rindo.gif"><!-- A img inicial -->
+
+
+<button onclick="document.getElementById('myImage').src='serio.gif'">Eu sem tu</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+<body>
+
+<!-- 
+
+Uma função no JavaScript function é um bloco de códigos js, que podem ser executados quando forem "chamados".
+
+Por examplo, uma função pode ser chamada quando eventos ocorrem, tipo quando um usuário clicar em um botão. 
+
+
+Como fazer e usar funções no js:
+-->
+<script>
+window.onload = function(){
+
+//Construindo uma função 
+
+function teste(/*Aqui ficam os paramêtros*/){
+console.log('Minha função teste feita com a nomeclatura mais comum');
+} 
+
+//chamando a função teste 
+teste();
+
+
+
+//Função feita através de uma variável 
+
+var variavel;
+
+variavel = function(){
+console.log("Minha função feita através da variável");
+}
+
+//chamando a função acima 
+variavel();
+
+
+
+//Exemplo de funçõe com paramêtros 
+
+function teste2(num1,num2){
+	return num1 + num2; //retorne na soma dos 2 números, só retorna ao resultado mas não imprime na tela nem no console do navegador.
+}
+
+//Específicando quem seriam num1 e num2, tb chamando a função acima como o valor de uma variável.
+var variavel2 = teste2(10,30);
+
+console.log(variavel2);
+
+/*Os paramêtros podem ser de qualquer tipo de variável(string, bool, number,double). */
+
+
+
+//Função através de um Objeto 
+
+//Declarando e atribuindo valor aos objetos de forma diferente 
+var obj = {'nome':'shell', 'idade': 19};
+
+obj.funcao = function(){
+console.log("Aqui minha função feita através do Objeto");
+}
+
+//chamando a função acima
+obj.funcao();
+
+
+
+//lembrando que um Objeto e um Array tem o msm comportamento 
+
+
+
+//Função através de um Array
+var ar = [];
+
+ar[0] = function(a,b,c,d){
+	console.log(a  + b + " " + c + d);
+}
+
+//chamando a função acima
+var exemplo = ar[0]('Pare','de','amar','ela');
+
+
+//NEW -  serve para criarmos um novo objeto, fazemos uma função se comportar como um objeto.
+
+//criando uma função
+function animal(){
+	this.nome = 'cachorro';
+	this.peso = '23kg';
+}
+
+//fazendo ela se torna um novo objeto 
+var meuanimal = new animal();
+
+console.log(meuanimal.nome);
+console.log(meuanimal.peso);
+}
+</script>
+</body>
+</html>
+

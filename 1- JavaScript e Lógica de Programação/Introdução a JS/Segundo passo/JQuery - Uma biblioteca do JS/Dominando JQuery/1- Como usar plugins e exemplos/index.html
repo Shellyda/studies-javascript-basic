@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dominando JQuery</title>
+	<!-- Incluindo arquivos para os plugins funcionarem -->
+	<link href="css/font-awesome.css" rel="stylesheet"/><!--para fazer os icones funcionarem no plugin das sociais -->
+	<link href="css/jssocials.css" rel="stylesheet" /><!-- arquivo de estilo do plugin das redes sociais -->
+	<link href="css/jssocials-theme-classic.css" rel="stylesheet" /><!-- o tema dos icones das sociais -->
+	<link href="css/jquery.fancybox.css" rel="stylesheet" /><!-- arquivo de estilo do plugin das janelas modais / galeria -->
+
+	<link href="css/style.css" rel="stylesheet" />
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<!-- conteúdo do nosso site ficticío -->
+<article>
+	<header>
+		<h2>Testando plugins do JQuery: Icones de medias sociais, 'Mascaras' para Inputs e um sistema de slide + galeria(opcional na codificação desse plugin, fica a sua escolha).</h2>
+	</header>
+	<p style="margin: 20px 0; font-size: 18px; color: #069; font-weight: bold;">São um conjunto de arquivos com códigos já prontos que desenpenham diversas funções.<br/> Para utilizar eles basta pesquisar os eventos, elementos..etc que vc deseja, baixar os plugins e a documentação API deles, seguindo as instruções do autor dos códigos de como incluir e fazer o plugin funcionar no site. </p>
+</article>
+
+<div id="social-share"></div><!-- icones das redes sociais -->
+
+<!-- inputs para testar o plugin de mask -->
+<div class="cega">
+<input type="text" name="telefone" />
+<input type="text" name="data" />
+</div>
+
+<!-- colocando o rel de todos os elementos 'a' fazemos o plugin iniciar um sistema de galeria, como se ele entendesse que por terem o msm rel funcionam em conjunto.-->
+<div class="galeria">
+<a rel="galeria1" href="imagens/img1.jpg"><img src="imagens/img1.jpg" /></a>
+<a rel="galeria1" href="imagens/img2.jpg"><img src="imagens/img2.jpg" /></a>
+<a rel="galeria1" href="imagens/img3.jpg"><img src="imagens/img3.jpg" /></a>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<!-- Incluindo os plugins -->
+<script src="js/jssocials.min.js"></script><!-- plugin das sociais -->
+<script src="js/jquery.mask.js"></script><!-- plugin das mask para inputs -->
+<script src="js/jquery.fancybox.js"></script><!-- plugin das janelas modais / galeria -->
+<script src="js/functions.js"></script><!-- arquivo onde ativamos os plugins -->
+</body>
+</html>

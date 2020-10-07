@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Como criar os Plugins</title>
+	<meta charset="utf-8" />
+</head>
+<style>
+	/*Classe adicionada dinamicamente*/
+	.greenified{
+             color: purple;
+             background-color: purple;
+	}
+</style>
+<body>
+
+
+
+<div style="margin: 100px auto; text-align: center; text-transform: uppercase;">
+<p>Testando a mudança de cor para laranja.</p>
+<!-- Antes do plugin ser chamado: -->
+<a class="a1" href="page.html">Foo</a>
+ 
+<!-- Depois do plugin ser chamado: -->
+<a class="a2" href="page.html">Foo <!--(page.html)--></a>
+</div>
+
+
+
+
+
+
+
+<!-- importando os arquivos js -->
+<script src="js/jquery.js"></script>
+<script src="js/plugin.jquery.js"></script><!-- chamando o plugin criado -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+//Fazendo o Babel traduzir a linguagem do React, perceba que nem o seu editor de texto, o sublime, consegue entender o que o código abaixo significa. 
+//Perceba agr que o editor de texto entende os códigos em React 
+
+var container = document.getElementById('main');
+
+//Criando classes
+ class Box extends React.Component{
+//Usando o objeto props, aplicação própria do React js.
+render(){
+   return <h1>{this.props.nome} {this.props.sobrenome}  {this.props.olamundo}</h1> 
+}
+}
+
+class Box2 extends React.Component{
+//Resgatando o conteúdo entre tags:
+render(){
+   return <p>{this.props.children}</p> 
+}
+}
+
+//Chamando a classe e incluindo os valores dos objetos acima de modo dinâmico!
+ ReactDOM.render(<div class="PAI"><Box nome="Jorge" sobrenome="Arraujo"/><Box olamundo="Olá mundo incluído dinamicamente!" /><Box2>Conteúdo dentro de uma tag pode tb ser chamado de maneira dinâmica!</Box2></div>,container);

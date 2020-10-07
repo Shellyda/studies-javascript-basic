@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciando JQuery</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- para que o JQuery seja aplicado corretamente se faz necessário criar um contexto usando css -->
+
+<style>
+	p{
+		font-size: 22px;
+	}
+	button{
+		margin: 20px 100px;
+		background-color: #3495eb;
+		line-height: 10px;
+		height: 60px;
+		padding: 10px;
+		border: 1px solid #09131c;
+		color: white;
+	}
+
+</style>
+
+</head>
+<body>
+
+<button class="botao" type="button">O evento de clique aqui!</button><!-- botão -->
+
+<div class="teste"><p style="font-weight: bold; font-size: 18px;">Aplicando eventos sobre este elemento!</p></div><!-- Elemento teste -->
+
+
+<input style="margin: 20px 100px; padding: 20px 50px;" type="text" placeholder="Testando o evento Focus" class="box"><!-- box -->
+
+<textarea class="text" style="padding: 100px 80px; margin: 20px; resize: none;">Testando outra forma  de implementar o evento focus e blur</textarea> <!-- text -->
+
+<!-- testando um evento que faz formulários serem enviados automáticamente -->
+<select style="margin:20px 100px; padding: 20px 40px;">
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+
+</select><!-- select -->
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/eventos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+- Aqui estão todas as aulas dos módulos do jquery. 
+- Seguindo a mesma ordem da listagem da última pasta, aqui os arquivos de encontram formatados e repaginados, na sua versão final.
+- Aproveite para mexer no código e estudar, entendendo como funciona, de fato, o código em JQ.
+
+
+Espero que sua revisão seja produtiva :)

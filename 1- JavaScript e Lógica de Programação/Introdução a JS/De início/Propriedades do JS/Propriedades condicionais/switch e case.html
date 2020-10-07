@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+<body>
+
+<!-- Switch case - Uma propriedade que impõe condições 
+
+	"caso for isso, aplique essa ação."
+
+
+-->
+<script>
+window.onload = function(){
+
+
+var nome = '24';//tipo string
+
+switch(/* Aqui fica o nome da variável */ nome){
+
+case 24: console.log("Essa condição não será considerada, pois não é verdadeira, o switch case ,assim como o operador '===', apenas considera variáveis identicas, tanto nas escrita como no tipo.");
+break;//por padrão quando o case é considerado verdadeiro o flow do switch é interrompido.
+
+case '24': alert("A condição verdadeira é essa.");
+break;
+}
+
+
+
+}
+
+</script>
+</body>
+</html>

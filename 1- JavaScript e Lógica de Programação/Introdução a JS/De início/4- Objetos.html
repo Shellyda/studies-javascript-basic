@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introdução a JavaScript</title>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+	
+	window.onload = function(){
+
+/* Declarando uma variável como um OBJETO, funciona como um vetor e alocando memória, representando inúmeras variáveis. TEM O MSM COMPORTAMENTO DE UM ARRAY */
+         var exemplo = {};
+
+/* Atribuindo valores */
+       exemplo.nome = 'maria';
+       exemplo.peso = '24kg';
+       exemplo.idade = 23;
+       exemplo['idade'] = 24; /* reescrevendo o código da idade, já que o código é lido de cima para baixo. Apenas a nomeclatura é diferente, funcionam da msm forma. */
+
+
+/* OBJETO.variável = VALOR */
+
+
+/*Mostra as msgs diretamente no console do navegador na msm linha */
+  console.log(exemplo.nome, exemplo.peso, exemplo.idade);
+
+/* em linhas diferentes */
+  console.log(exemplo.nome);
+  console.log(exemplo['idade']);
+  console.log(exemplo.peso);
+
+
+
+
+//novas maneiras de atribuir valores ás variáveis
+
+var exemplo2 = {'nome2': 'jorge', 'peso2': '40kg', 'idade2':5};
+console.log(exemplo2.nome2, exemplo2.peso2, exemplo2.idade2);
+
+
+
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+}
+
+article{
+	width: 100%;
+	max-width: 700px;
+	margin: 50px auto;
+}
+a > img{
+	width: 200px;
+}
+
+input[type=text]{
+	outline: 0;
+	padding: 20px;
+	margin: 20px 30px;
+}
+
+div.cega{
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+div.galeria{
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+#social-share{
+	margin: 0 auto;
+	text-align: center;
+}
