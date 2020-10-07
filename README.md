@@ -1,4 +1,4 @@
-# JavaScript
+# Conhecendo JavaScript 
  O básico sobre JavaScript para iniciantes na programação!
 
  <ul>
