@@ -4,7 +4,7 @@ Support repository for those starting to study web development with practical Ja
 
 ## Overview
 
-Welcome to the "Conhecendo JavaScript" repository! This repository covers the basics of JavaScript for beginners in programming.
+This repository covers the basics of JavaScript for beginners in programming.
 
 ### Main Points:
 
